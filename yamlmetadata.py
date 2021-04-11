@@ -8,10 +8,7 @@ except ImportError:
 
 try:
     import yaml
-    try:
-        from yaml import CBaseLoader as YamlLoader
-    except ImportError:
-        from yaml import BaseLoader as YamlLoader
+    from yaml import SafeLoader as YamlLoader
 except ImportError:
     yaml = False
 
